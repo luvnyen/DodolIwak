@@ -2,6 +2,10 @@
     background: #EFF6FF;
 }
 
+.product-list-slider-container {
+    background: #fff6c9;
+}
+
 .product-list-content-container {
     width: 80vw;
 }
@@ -57,6 +61,12 @@
     font-size: 10pt;
 }
 
+.product-item-price-crossed {
+    font-size: 10pt;
+    color: gray;
+    text-decoration: line-through;
+}
+
 .product-item-price {
     font-weight: 650;
     font-size: 11pt;
@@ -81,8 +91,20 @@
     right: 20px;
 }
 
-.product @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .product-list-content-container {
         width: 95vw;
     }
+}
+
+
+/* external css: flickity.css */
+
+.flickity-page-dots,
+.flickity-button {
+    visibility: hidden;
+}
+
+.gallery-cell {
+    padding: 0px 12px 0px 12px;
 }

@@ -1,0 +1,26 @@
+.motto-container {
+    background: #DBEAFE;
+    display: grid;
+    place-items: center;
+}
+
+.motto-content-container {
+    width: 80vw;
+}
+
+#motto-svg {
+    width: 100px;
+}
+
+#motto-text {
+    font-size: 16pt;
+    font-weight: 630;
+}
+
+@media only screen and (max-width: 768px) {
+    .motto-content-container {
+        width: 95vw;
+        display: grid;
+        place-items: center;
+    }
+}
