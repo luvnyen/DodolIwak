@@ -14,6 +14,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./style/style-footer.css">
+    <link rel="stylesheet" href="./style/style-product-list.css">
 
     <!-- Misc -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -31,10 +32,12 @@
 </head>
 
 <body>
+    <div class="product-list-container row justify-content-center py-4"></div>
     <div class="footer-container row justify-content-center py-4"></div>
 
     <script>
         $(document).ready(function() {
+            $(".product-list-container").load("./product-list.html");
             $(".footer-container").load("./footer.html");
         });
     </script>
