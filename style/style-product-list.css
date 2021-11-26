@@ -17,6 +17,7 @@
 
 .product-item-container {
     position: relative;
+    padding: 0px 12px 0px 12px;
 }
 
 .product-item-container-desc {
@@ -95,16 +96,4 @@
     .product-list-content-container {
         width: 95vw;
     }
-}
-
-
-/* external css: flickity.css */
-
-.flickity-page-dots,
-.flickity-button {
-    visibility: hidden;
-}
-
-.gallery-cell {
-    padding: 0px 12px 0px 12px;
 }

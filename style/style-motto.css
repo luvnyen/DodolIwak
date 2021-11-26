@@ -23,4 +23,8 @@
         display: grid;
         place-items: center;
     }
+    #motto-text {
+        text-align: center;
+        margin-top: 10px;
+    }
 }

@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="./style/style-product-details.css">
+
+<div class="product-details-content-container row">
+    <div class="product-image-container col-12 col-md-6 p-0">
+        <div id="product-details-image"></div>
+    </div>
+    <div class="product-desc-container col-12 col-md-6">
+        <div class="row">
+            <span id="product-title">Kerang Simping</span>
+            <span id="product-weight">0.5 kg</span>
+            <span id="product-price-crossed">Rp57.537</span>
+            <span id="product-price">Rp44.913</span>
+            <span id="product-stock"><b>Stok Banyak!</b> Tersisa >50</span>
+            <button class="btn mt-3" id="product-buy-btn">Beli</button>
+        </div>
+    </div>
+    <hr class="mt-5 mb-4">
+    <div class="product-desc-long-container row">
+        <span id="product-desc-title">Deskripsi Produk</span>
+        <pre id="product-desc-long-text">
+            Kerang Simping merupakan Kerang yg mudah ditemui dan bernilai ekonomi sebagai sumber makanan & cangkangnya sering dimanfaatkan untuk dijadikan bahan kerajinan.
+            -----------------------------------------------------------
+            Kerang Simping Frozen / Kerang Simping Beku (500 gram / 0,5 kg)
+            *Bobot yang dicantumkan merupakan bobot pada kondisi beku*
+            -----------------------------------------------------------
+            Cara Menjaga Kualitas Seafood Nalayan:
+            1. Simpan di dalam freezer dengan suhu -18 derajat Celcius.
+            2. Jangan Bekukan (refreeze) Seafood Kembali Jika telah dicairkan (thawing)
+            -----------------------------------------------------------
+        </pre>
+    </div>
+    <div class="product-review-container row">
+        <span id="product-desc-title">Review Produk</span>
+        <span id="product-review-none">Belum ada review</span>
+    </div>
+</div>
+
+<script>
+    // CREDITS TO https://www.cssscript.com/image-zoom-pan-hover-detail-view/
+    var addZoom = function(target) {
+        // (A) FETCH CONTAINER + IMAGE
+        var container = document.getElementById(target),
+            imgsrc = container.currentStyle || window.getComputedStyle(container, false),
+            imgsrc = imgsrc.backgroundImage.slice(4, -1).replace(/"/g, ""),
+            img = new Image();
+
+        // (B) LOAD IMAGE + ATTACH ZOOM
+        img.src = imgsrc;
+        img.onload = function() {
+            var imgWidth = img.naturalWidth,
+                imgHeight = img.naturalHeight,
+                ratio = imgHeight / imgWidth,
+                percentage = ratio * 100 + '%';
+
+            // (C) ZOOM ON MOUSE MOVE
+            container.onmousemove = function(e) {
+                var boxWidth = container.clientWidth,
+                    rect = e.target.getBoundingClientRect(),
+                    xPos = e.clientX - rect.left,
+                    yPos = e.clientY - rect.top,
+                    xPercent = xPos / (boxWidth / 100) + "%",
+                    yPercent = yPos / ((boxWidth * ratio) / 100) + "%";
+
+                Object.assign(container.style, {
+                    backgroundPosition: xPercent + ' ' + yPercent,
+                    backgroundSize: imgWidth + 'px'
+                });
+            };
+
+            // (D) RESET ON MOUSE LEAVE
+            container.onmouseleave = function(e) {
+                Object.assign(container.style, {
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover'
+                });
+            };
+        }
+    };
+
+    window.addEventListener("load", function() {
+        addZoom("product-details-image");
+    });
+</script>
