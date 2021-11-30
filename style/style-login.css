@@ -80,10 +80,6 @@ label {
     margin-top: 10px;
 }
 
-.navbar-padding {
-    display: none;
-}
-
 @media only screen and (max-width: 768px) {
     .form-cover {
         width: 80vw;
