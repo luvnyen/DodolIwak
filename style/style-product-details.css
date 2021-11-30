@@ -74,7 +74,14 @@
     word-wrap: break-word;
 }
 
+.product-desc-long-container {
+    margin-bottom: 15px;
+}
+
 @media only screen and (max-width: 768px) {
+    .product-details-container {
+        padding-top: 20px!important;
+    }
     .product-details-content-container {
         width: 95vw;
     }
