@@ -38,15 +38,6 @@
     width: 100%;
 }
 
-#newsletter-email-btn {
-    border-radius: 0px 5px 5px 0px;
-    transition: 0.5s;
-}
-
-#newsletter-email-btn:hover {
-    background: #003F94;
-}
-
 .newsletter-email-container {
     display: grid;
     place-items: center;
@@ -61,6 +52,12 @@
     background: #3B82F6;
     font-weight: 600;
     color: white;
+    border-radius: 0px 5px 5px 0px;
+    transition: 0.5s;
+}
+
+#newsletter-email-btn:hover {
+    background: #003F94;
 }
 
 @media only screen and (max-width: 768px) {

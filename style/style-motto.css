@@ -6,6 +6,7 @@
 
 .motto-content-container {
     width: 80vw;
+    display: flex;
 }
 
 #motto-svg {
@@ -15,6 +16,9 @@
 #motto-text {
     font-size: 16pt;
     font-weight: 630;
+    display: grid;
+    place-items: center;
+    margin-left: 10px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -26,5 +30,6 @@
     #motto-text {
         text-align: center;
         margin-top: 10px;
+        margin-left: 0px;
     }
 }

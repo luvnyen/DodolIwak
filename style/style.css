@@ -1,31 +1,3 @@
 .row {
     margin: 0;
 }
-
-.whatsapp-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgb(37, 211, 102);
-    color: white;
-    font-size: 15pt;
-    border-radius: 10px;
-}
-
-.whatsapp-icon-sticky {
-    margin-right: 8px;
-}
-
-@media only screen and (max-width: 768px) {
-    #whatsapp-text {
-        display: none;
-    }
-    .whatsapp-icon-sticky {
-        margin-right: 0;
-        font-size: 20pt;
-    }
-    .whatsapp-container {
-        display: grid;
-        place-items: center;
-    }
-}

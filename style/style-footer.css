@@ -24,7 +24,7 @@
 #footer-copyright {
     color: gray;
     font-size: 10pt;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .footer-social-logo {
@@ -35,12 +35,15 @@
 
 #footer-line-separator {
     background: gray;
-    height: 0.1px;
     border: none;
+    margin: 20px 0px 20px 0;
 }
 
 @media only screen and (max-width: 768px) {
     .footer-content-container {
         width: 95vw;
+    }
+    .footer-container {
+        margin-bottom: 15px;
     }
 }
